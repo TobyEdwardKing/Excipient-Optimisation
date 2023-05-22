@@ -1,0 +1,15 @@
+#include "martini_v2.3P_PEO.itp"
+#include "$Molecule.itp"
+#include "martini_v2.0_ions.itp"
+#define RUBBER_BANDS
+
+#include "Protein.itp"
+
+[ system ]
+; Name
+Protein and $Molecule in water
+
+[ molecules ]
+; Compound        #mols
+Protein_A	1
+
