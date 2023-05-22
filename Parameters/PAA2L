@@ -1,0 +1,42 @@
+; /usr/local/bin/polyply gen_params -lib martini2 -f lauratetail.ff -o PE2L.itp -name surf -seq TAIL:1 PEO:2 OHter:1
+
+; Please cite the following papers:
+; Marrink, S J; Risselada, H J; Yefimov, S; Tieleman, D P; De Vries, A H;  The journal of physical chemistry B 2007; 10.1021/jp071097f
+; Grunewald, F; Rossi, G; de Vries, A H; Marrink, S J; Monticelli, L;  The Journal of Physical Chemistry B 2018; 10.1021/acs.jpcb.8b04760
+; Grunewald, F; Alessandri, R; Kroon, P C; Monticelli, L; Souza, P C; Marrink, S J;  Nature Communications 2022; 10.1038/s41467-021-27627-4
+
+[ moleculetype ]
+PE2L 1
+
+[ atoms ]
+1 C1  1 TAIL  C1   1 0.0     
+2 C1  1 TAIL  C2   2 0.0     
+3 C2  1 TAIL  C3   3 0.0     
+4 P3  1 TAIL  PEOL 5 0.0     
+5 EO  2 PEO   COC  6 0.0 45.0
+6 EO  3 PEO   COC  7 0.0 45.0
+7 SP2 4 OHter OH   8 0.0 45.0
+
+[ bonds ]
+1 2 1 0.4700000 1250.00000000
+2 3 1 0.4700000 1250.00000000
+3 4 1 0.31434 4000.00000000
+5 6 1 0.322 7000
+
+; OHter-PEG
+6 7 1 0.2800 7000
+
+; tail-PEO
+4 5 1 0.34429 7000.00000000
+
+[ angles ]
+1 2 3 2 180.00000000 25.00000000
+2 3 4 2 180.00000000 25.00000000
+
+; OHter-PEG
+5 6 7 2 140.0 25.0
+
+; tail-PEO
+3 4 5 2 140.00000000 25.00000000
+4 5 6 10 135.00000000 75.00000000
+
