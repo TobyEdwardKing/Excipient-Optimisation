@@ -1,0 +1,47 @@
+;;;;;; Martini lipid topology for beta-octylglucoside
+;
+; Description:
+;   A Martini model of beta-octylglucoside (bOG)
+; Parameterization:
+;   Parameters provided by Alexander BjÃ¶rling & Sebastian Westenhoff, University of Gothenburg 
+;   (email: westenho@chem.gu.se)
+; Warning(s)/Note(s):
+;   Note, bonds with force constant > 25000 are treated as constraints, but use harmonic bonds for minimization. 
+;   Add define=-DFLEXIBLE to select harmonic bonds for minimization purposes.
+;
+
+[ moleculetype ]
+; molname      nrexcl
+  n-OG         1
+
+[ atoms ]
+; id 	type 	resnr 	residu 	atom 	cgnr 	charge   mass
+  1   P1 	1     BOG   B1   1    0	60.0528
+  2   P4 	1     BOG   B2   2    0	60.0528
+  3   P2 	1     BOG   B3   3    0	60.0528
+  4   C1 	1     BOG   C1   4    0 	
+  5   C1 	1     BOG   C2   5    0 	
+
+[ bonds ]
+; i j 	funct 	length 	force.c.
+#ifdef FLEXIBLE
+  1 2 	1	0.375	35000
+  1 3 	1	0.331	35000
+  2 3 	1	0.322	50000
+#endif
+  3  4  1	0.470 	1250
+  4  5  1	0.470 	1250
+
+[ angles ]
+; i j k 	funct 	angle 	force.c.
+  3  4  5 	2 	180.0     15.0 
+  1  3  4 	2 	 93.0    125
+  2  3  4 	2 	140.0    300
+
+#ifndef FLEXIBLE
+[ constraints ]
+;  i  j  k 	funct 	length
+  1  2 	1	0.375	35000
+  1  3 	1	0.331	35000
+  2  3 	1	0.322	50000
+#endif
