@@ -1,0 +1,11 @@
+/usr/local/bin/polyply gen_coords -p system.top -dens 1000 -name system -o system.gro
+8
+    1TAIL    C1    1   0.297   0.173   0.391
+    1TAIL    C2    2   0.401   0.296   0.488
+    1TAIL    C3    3   0.504   0.420   0.585
+    1TAIL    C4    4   0.426   0.521   0.722
+    1TAIL  PEOL    5   0.373   0.589   0.814
+    2PEO    COC    6   0.368   0.684   0.904
+    3PEO    COC    7   0.375   0.119   0.183
+    4OHter   OH    8   0.785   0.207   0.088
+0.93674 0.93674 0.93674
