@@ -9,7 +9,7 @@
 ; Monticelli, L; Kandasamy, S K; Periole, X; Larson, R G; Tieleman, D P; Marrink, S J;  Journal of chemical theory and computation 2008
 
 [ moleculetype ]
-Protein_A 1
+Protein 1
 
 [ atoms ]
    1 Qd    2 ALA BB     1     1     
